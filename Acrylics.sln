@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrylics", "Acrylics\Acrylics.csproj", "{8E398E51-D736-4060-AE4C-6766D69B936B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrylics.Demo", "Acrylics.Demo\Acrylics.Demo.csproj", "{625CA634-D8B0-4CCA-911D-7E52270A52C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E398E51-D736-4060-AE4C-6766D69B936B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E398E51-D736-4060-AE4C-6766D69B936B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E398E51-D736-4060-AE4C-6766D69B936B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E398E51-D736-4060-AE4C-6766D69B936B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625CA634-D8B0-4CCA-911D-7E52270A52C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625CA634-D8B0-4CCA-911D-7E52270A52C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625CA634-D8B0-4CCA-911D-7E52270A52C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625CA634-D8B0-4CCA-911D-7E52270A52C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9886253F-20AB-4EC6-938D-4A0B2BC81156}
+	EndGlobalSection
+EndGlobal
