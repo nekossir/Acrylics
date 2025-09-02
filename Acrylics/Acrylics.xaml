@@ -18,47 +18,52 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:AcrylicPanel}">
-                    <Grid ClipToBounds="True">
-                        <!-- background -->
-                        <Rectangle>
-                            <Rectangle.Fill>
-                                <SolidColorBrush Color="#888"/>
-                            </Rectangle.Fill>
-                        </Rectangle>
-                        <!-- main -->
-                        <Canvas>
-                            <ContentControl>
-                                <ContentControl.CacheMode>
-                                    <BitmapCache RenderAtScale="0.2"/>
-                                </ContentControl.CacheMode>
-                                <Rectangle x:Name="rect"
-                                           IsHitTestVisible="False"
-                                           Width="{Binding Target.ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}"
-                                           Height="{Binding Target.ActualHeight, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}"
-                                           ClipToBounds="False">
-                                    <Rectangle.Fill>
-                                        <VisualBrush Stretch="None" AlignmentX="Left" AlignmentY="Top"
-                                                     ViewboxUnits="Absolute"
-                                                     Visual="{Binding Target, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}">
-                                        </VisualBrush>
-                                    </Rectangle.Fill>
-                                    <Rectangle.RenderTransform>
-                                        <MultiBinding Converter="{StaticResource brushTranslationConverter}">
-                                            <Binding Path="Target" RelativeSource="{RelativeSource AncestorType={x:Type local:AcrylicPanel}}"/>
-                                            <Binding Path="Source" RelativeSource="{RelativeSource AncestorType={x:Type local:AcrylicPanel}}"/>
-                                        </MultiBinding>
-                                    </Rectangle.RenderTransform>
-                                </Rectangle>
-                            </ContentControl>
-                        </Canvas>
+                    <Grid>
+                        <Grid ClipToBounds="True">
+                            <!-- background -->
+                            <Rectangle>
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="#888"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <!-- main -->
+                            <Canvas>
+                                <ContentControl>
 
-                        <ContentControl>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </ContentControl>
-                        <Grid.Effect>
-                            <shaders:GaussianBlurEffect Sigma="10"/>
-                        </Grid.Effect>
+                                    <ContentControl.CacheMode>
+                                        <BitmapCache RenderAtScale="0.2"/>
+                                    </ContentControl.CacheMode>
+
+                                    <Rectangle x:Name="rect"
+                       IsHitTestVisible="False"
+                       Width="{Binding Target.ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}"
+                       Height="{Binding Target.ActualHeight, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}"
+                       ClipToBounds="False">
+                                        <Rectangle.Fill>
+                                            <VisualBrush Stretch="None" AlignmentX="Left" AlignmentY="Top"
+                                 ViewboxUnits="Absolute"
+                                 Visual="{Binding Target, RelativeSource={RelativeSource AncestorType={x:Type local:AcrylicPanel}}}">
+                                            </VisualBrush>
+                                        </Rectangle.Fill>
+                                        <Rectangle.RenderTransform>
+                                            <MultiBinding Converter="{StaticResource brushTranslationConverter}">
+                                                <Binding Path="Target" RelativeSource="{RelativeSource AncestorType={x:Type local:AcrylicPanel}}"/>
+                                                <Binding Path="Source" RelativeSource="{RelativeSource AncestorType={x:Type local:AcrylicPanel}}"/>
+                                            </MultiBinding>
+                                        </Rectangle.RenderTransform>
+                                        <Rectangle.Effect>
+                                            <shaders:GaussianBlurEffect Sigma="10"/>
+                                        </Rectangle.Effect>
+                                    </Rectangle>
+                                </ContentControl>
+                            </Canvas>
+
+                            <ContentControl>
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </ContentControl>
+                            
+                        </Grid>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
